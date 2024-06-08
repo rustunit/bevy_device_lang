@@ -14,10 +14,11 @@ pub fn get_lang() -> String {
     crate::android::lang_android()
 }
 
-//TODO: support wasm
-#[cfg(target_arch = "wasm32")]
+#[cfg(target_family = "wasm")]
 pub fn get_lang() -> String {
-    "en-US".into()
+    web_sys::window()
+        .and_then(|w| w.navigator().language())
+        .unwrap_or_default()
 }
 
 //TODO: support linux
