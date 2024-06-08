@@ -1,6 +1,6 @@
 [package]
 name = "bevy_device_lang"
-version = "0.3.0"
+version = "0.3.1"
 edition = "2021"
 readme = "README.md"
 license = "MIT"
@@ -9,6 +9,9 @@ documentation = "https://docs.rs/bevy_device_lang"
 repository = "https://github.com/rustunit/bevy_device_lang"
 keywords = ["bevy", "gamedev", "mobile", "crossplatform"]
 description = "Crossplatform way to query device language setting"
+
+[package.metadata.docs.rs]
+default-target = "x86_64-apple-darwin"
 
 [target.'cfg(any(target_os = "ios", target_os = "macos"))'.dependencies]
 objc2 = "0.4"

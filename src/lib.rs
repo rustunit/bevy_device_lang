@@ -4,6 +4,7 @@ mod android;
 #[cfg(any(target_os = "macos", target_os = "ios"))]
 mod apple;
 
+/// return language code like "en-US", "en-UK" or two letter ones like "en", "de"
 #[cfg(any(target_os = "macos", target_os = "ios"))]
 pub fn get_lang() -> Option<String> {
     crate::apple::lang_apple()

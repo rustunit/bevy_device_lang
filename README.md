@@ -25,6 +25,16 @@ See also:
 ## Todo
 * win, linux
 
+## Usage
+
+Add dependency: `bevy_device_lang = "0.3"`
+
+```rust
+fn bevy_system() {
+    let lang : Option<String> = bevy_device_lang::get_lang();
+}
+```
+
 # License
 
 All code in this repository is dual-licensed under either:
