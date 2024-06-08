@@ -1,25 +1,24 @@
 use jni::{self, objects::JString};
 
-pub fn lang_android() -> String {
+pub fn lang_android() -> Option<String> {
     let ctx = ndk_context::android_context();
-    let vm = unsafe { jni::JavaVM::from_raw(ctx.vm().cast()) }.unwrap();
-    // let context = unsafe { JObject::from_raw(ctx.context().cast()) };
-    let mut env = vm.attach_current_thread().unwrap();
-    let class = env.find_class("java/util/Locale").unwrap();
+    let vm = unsafe { jni::JavaVM::from_raw(ctx.vm().cast()) }.ok()?;
+    let mut env = vm.attach_current_thread().ok()?;
+    let class = env.find_class("java/util/Locale").ok()?;
     let locale = env
         .call_static_method(class, "getDefault", "()Ljava/util/Locale;", &[])
-        .unwrap()
+        .ok()?
         .l()
-        .unwrap();
+        .ok()?;
 
     let lang: JString = env
         .call_method(locale, "toLanguageTag", "()Ljava/lang/String;", &[])
-        .unwrap()
+        .ok()?
         .l()
-        .unwrap()
+        .ok()?
         .into();
 
-    let lang = env.get_string(&lang).unwrap();
+    let lang = env.get_string(&lang).ok()?;
     let lang: String = lang.into();
-    lang
+    Some(lang)
 }

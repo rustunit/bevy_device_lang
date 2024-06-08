@@ -1,4 +1,4 @@
-pub fn lang_apple() -> String {
+pub fn lang_apple() -> Option<String> {
     use icrate::Foundation::NSString;
     use objc2::{class, msg_send, runtime::NSObject};
 
@@ -6,8 +6,8 @@ pub fn lang_apple() -> String {
     let id = unsafe {
         let array: *const NSObject = msg_send![nslocale, preferredLanguages];
         let id: *const NSString = msg_send![array, objectAtIndex:0_isize];
-        id.as_ref().unwrap()
+        id.as_ref()?
     };
 
-    id.to_string()
+    Some(id.to_string())
 }
