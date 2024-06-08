@@ -15,13 +15,7 @@ Provides access device language cross-platform: iOS, Android
 Useful to support app localization in the right language.
 
 See also:
-
-* [bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap)
-* [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter)
-* [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications)
-* [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts)
-* [bevy_ios_review](https://github.com/rustunit/bevy_ios_review)
-* [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
+[bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap), [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter), [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications), [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts), [bevy_ios_review](https://github.com/rustunit/bevy_ios_review) & [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
 
 ## Features
 * macOS, iOS
