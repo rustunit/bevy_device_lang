@@ -1,0 +1,19 @@
+[package]
+name = "bevy_device_lang"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+license = "MIT"
+authors = ["extrawurst <mail@rusticorn.com>"]
+documentation = "https://docs.rs/bevy_device_lang"
+repository = "https://github.com/rustunit/bevy_device_lang"
+keywords = ["bevy", "gamedev", "mobile", "ios", "android"]
+description = "Crossplatform way to query device language setting"
+
+[target.'cfg(any(target_os = "ios", target_os = "macos"))'.dependencies]
+objc2 = "0.4"
+icrate = { version = "0.0.4", features = ["Foundation", "Foundation_NSArray"] }
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "0.21"
+ndk-context = "0.1"
