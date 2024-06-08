@@ -7,7 +7,7 @@ license = "MIT"
 authors = ["extrawurst <mail@rusticorn.com>"]
 documentation = "https://docs.rs/bevy_device_lang"
 repository = "https://github.com/rustunit/bevy_device_lang"
-keywords = ["bevy", "gamedev", "mobile", "ios", "android", "wasm"]
+keywords = ["bevy", "gamedev", "mobile", "crossplatform"]
 description = "Crossplatform way to query device language setting"
 
 [target.'cfg(any(target_os = "ios", target_os = "macos"))'.dependencies]
