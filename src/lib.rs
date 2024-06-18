@@ -23,7 +23,14 @@ pub fn get_lang() -> Option<String> {
 //TODO: support linux
 #[cfg(target_os = "linux")]
 pub fn get_lang() -> Option<String> {
-    None
+    use std::env;
+
+    if let Ok(value) = env::var("LC_ALL").or_else(|_| env::var("LC_MESSAGES")).or_else(|_| env::var("LANG")) {
+        Some(value)
+    }else {
+        None
+    }
+
 }
 
 //TODO: support win
