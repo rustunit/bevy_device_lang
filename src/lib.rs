@@ -20,7 +20,6 @@ pub fn get_lang() -> Option<String> {
     web_sys::window().and_then(|w| w.navigator().language())
 }
 
-//TODO: support linux
 #[cfg(target_os = "linux")]
 pub fn get_lang() -> Option<String> {
     use std::env;
