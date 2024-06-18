@@ -25,12 +25,14 @@ pub fn get_lang() -> Option<String> {
 pub fn get_lang() -> Option<String> {
     use std::env;
 
-    if let Ok(value) = env::var("LC_ALL").or_else(|_| env::var("LC_MESSAGES")).or_else(|_| env::var("LANG")) {
+    if let Ok(value) = env::var("LC_ALL")
+        .or_else(|_| env::var("LC_MESSAGES"))
+        .or_else(|_| env::var("LANG"))
+    {
         Some(value)
-    }else {
+    } else {
         None
     }
-
 }
 
 //TODO: support win
