@@ -28,5 +28,6 @@ features = ["Navigator", "Window"]
 
 [target.'cfg(target_os = "windows")'.dependencies]
 windows = { version = "0.57", features = [
-    "Win32_Globalization", "Win32_System_SystemServices"
+    "Win32_Globalization",
+    "Win32_System_SystemServices",
 ] }
