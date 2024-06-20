@@ -4,6 +4,8 @@ mod android;
 #[cfg(any(target_os = "macos", target_os = "ios"))]
 mod apple;
 
+mod windows;
+
 /// return language code like "en-US", "en-UK" or two letter ones like "en", "de"
 #[cfg(any(target_os = "macos", target_os = "ios"))]
 pub fn get_lang() -> Option<String> {
@@ -34,8 +36,7 @@ pub fn get_lang() -> Option<String> {
     }
 }
 
-//TODO: support win
 #[cfg(target_os = "windows")]
 pub fn get_lang() -> Option<String> {
-    None
+    crate::windows::lang_windows()
 }

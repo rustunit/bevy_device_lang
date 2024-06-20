@@ -25,3 +25,8 @@ ndk-context = "0.1"
 [target.'cfg(target_family = "wasm")'.dependencies.web-sys]
 version = "0.3"
 features = ["Navigator", "Window"]
+
+[target.'cfg(target_os = "windows")'.dependencies]
+windows = { version = "0.57", features = [
+    "Win32_Globalization", "Win32_System_SystemServices"
+] }
