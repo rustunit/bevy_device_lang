@@ -17,6 +17,10 @@ Useful to support app localization in the right language.
 See also:
 [bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap), [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter), [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications), [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts), [bevy_ios_review](https://github.com/rustunit/bevy_ios_review) & [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
 
+See the crate in action in [Zoolitaire](www.zoolitaire.com):
+
+![demo](./assets/demo.gif)
+
 ## Features
 * macOS, iOS (using `[NSLocale preferredLanguage]` see [docs](https://developer.apple.com/documentation/foundation/nslocale/1415614-preferredlanguages))
 
