@@ -18,10 +18,11 @@ See also:
 [bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap), [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter), [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications), [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts), [bevy_ios_review](https://github.com/rustunit/bevy_ios_review) & [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
 
 ## Features
-* macOS, iOS (using `[NSLocale preferredLanguage]` [docs]([docs](https://developer.apple.com/documentation/foundation/nslocale/1415614-preferredlanguages)))
-* Android (using `Locale.getDefault().toLanguageTag` [docs](https://developer.android.com/reference/java/util/Locale#toLanguageTag()))
-* Wasm (uses `web-sys` and `Navigator.language()` [docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language))
-* Windows (using `GetUserDefaultLocaleName` [docs](https://learn.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename))
+* macOS, iOS (using `[NSLocale preferredLanguage]` see [docs](https://developer.apple.com/documentation/foundation/nslocale/1415614-preferredlanguages))
+
+* Android (using `Locale.getDefault().toLanguageTag` see [docs](https://developer.android.com/reference/java/util/Locale#toLanguageTag()))
+* Wasm (uses `web-sys` and `Navigator.language()` see [docs](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language))
+* Windows (using `GetUserDefaultLocaleName` see [docs](https://learn.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename))
 * Linux (using Env: `LC_ALL`, `LC_MESSAGES` or `LANG`)
 
 ## Usage
