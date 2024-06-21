@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        rust: [nightly, stable]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v2
+
+    - name: Cargo Check
+      run: cargo c
+
+    - name: Cargo Build
+      run: cargo b
+
+    - name: Cargo Build Release
+      run: cargo b --release
+
+    - name: Cargo Clippy
+      run: cargo clippy
