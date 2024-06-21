@@ -11,7 +11,7 @@
 [sh_discord]: https://img.shields.io/discord/1176858176897953872?label=discord&color=5561E6
 [lk_discord]: https://discord.gg/rQNeEnMhus
 
-Provides access device language cross-platform: iOS, Android, Web (Wasm).
+Provides access device language cross-platform: iOS, Android, Web (Wasm), Windows & Linux.
 Useful to support app localization in the right language.
 
 See also:
