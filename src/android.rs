@@ -1,5 +1,6 @@
 use jni::{self, objects::JString};
 
+/// uses `Locale.getDefault().toLanguageTag()` [docs](https://developer.android.com/reference/java/util/Locale#toLanguageTag())
 pub fn lang_android() -> Option<String> {
     let ctx = ndk_context::android_context();
     let vm = unsafe { jni::JavaVM::from_raw(ctx.vm().cast()) }.ok()?;

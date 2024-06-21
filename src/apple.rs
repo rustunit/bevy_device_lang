@@ -1,3 +1,5 @@
+/// returns first language from `[NSLocale preferredLanguages]`
+/// (see [docs](https://developer.apple.com/documentation/foundation/nslocale/1415614-preferredlanguages))
 pub fn lang_apple() -> Option<String> {
     use icrate::Foundation::NSString;
     use objc2::{class, msg_send, runtime::NSObject};

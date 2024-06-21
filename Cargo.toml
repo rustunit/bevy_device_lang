@@ -1,6 +1,6 @@
 [package]
 name = "bevy_device_lang"
-version = "0.3.1"
+version = "0.4.0"
 edition = "2021"
 readme = "README.md"
 license = "MIT"
@@ -17,8 +17,7 @@ default-target = "x86_64-apple-darwin"
 objc2 = "0.4"
 icrate = { version = "0.0.4", features = ["Foundation", "Foundation_NSArray"] }
 
-# [target.'cfg(target_os = "android")'.dependencies]
-[dependencies]
+[target.'cfg(target_os = "android")'.dependencies]
 jni = "0.21"
 ndk-context = "0.1"
 
