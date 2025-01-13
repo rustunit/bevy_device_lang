@@ -14,9 +14,6 @@
 Provides access device language cross-platform: iOS, Android, Web (Wasm), Windows & Linux.
 Useful to support app localization in the right language.
 
-See also:
-[bevy_ios_iap](https://github.com/rustunit/bevy_ios_iap), [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter), [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications), [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts), [bevy_ios_review](https://github.com/rustunit/bevy_ios_review) & [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
-
 See the crate in action in [Zoolitaire](www.zoolitaire.com):
 
 ![demo](./assets/demo.gif)
@@ -38,6 +35,19 @@ fn bevy_system() {
     let lang : Option<String> = bevy_device_lang::get_lang();
 }
 ```
+
+## Our Other Crates
+
+- [bevy_debug_log](https://github.com/rustunit/bevy_debug_log)
+- [bevy_device_lang](https://github.com/rustunit/bevy_device_lang)
+- [bevy_web_popups](https://github.com/rustunit/bevy_web_popups)
+- [bevy_libgdx_atlas](https://github.com/rustunit/bevy_libgdx_atlas)
+- [bevy_ios_review](https://github.com/rustunit/bevy_ios_review)
+- [bevy_ios_gamecenter](https://github.com/rustunit/bevy_ios_gamecenter)
+- [bevy_ios_alerts](https://github.com/rustunit/bevy_ios_alerts)
+- [bevy_ios_notifications](https://github.com/rustunit/bevy_ios_notifications)
+- [bevy_ios_impact](https://github.com/rustunit/bevy_ios_impact)
+- [bevy_ios_safearea](https://github.com/rustunit/bevy_ios_safearea)
 
 # License
 
