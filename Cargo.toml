@@ -9,6 +9,7 @@ documentation = "https://docs.rs/bevy_device_lang"
 repository = "https://github.com/rustunit/bevy_device_lang"
 keywords = ["bevy", "gamedev", "mobile", "crossplatform"]
 description = "Crossplatform way to query device language setting"
+exclude = ["assets/demo.gif"]
 
 [package.metadata.docs.rs]
 default-target = "x86_64-apple-darwin"
